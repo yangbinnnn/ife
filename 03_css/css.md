@@ -164,6 +164,24 @@ inherit: 继承父元素属性的文本样式，如字体大小，颜色等，�
 
 
 
+## 盒模型
+
+![box-model-standard-small](../assets/box-model-standard-small.png)
+
+
+
+[box-sizing](https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-sizing): border-box，改变 `width` 和 `height` 的作用范围
+
+![box-model-alt-small](../assets/box-model-alt-small.png)
+
+
+
+## float 浮动元素
+
+常用于多列布局，float 元素脱离原来的文档流。
+
+使用百分比的宽带，可以一定程度上自适应屏幕大小（流式、响应式布局）。
+
 
 
 ## 参考

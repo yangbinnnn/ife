@@ -27,7 +27,19 @@
     border-color: red;
     border-style: dashed;
     border-radius: 200px 200px;
+    width: 250px;
 }
+
+.bd-box {
+    text-align: center;
+    border-width: 10px;
+    border-color: red;
+    border-style: dashed;
+    border-radius: 200px 200px;
+    width: 250px;
+    box-sizing: border-box;
+}
+
 
 .bd-i {
     text-align: center;
