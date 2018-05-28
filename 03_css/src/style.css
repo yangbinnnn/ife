@@ -1,0 +1,56 @@
+.bg-c {
+    background-color: red;
+}
+
+.bg-i {
+    padding: 100px;
+    background-image: url("avatar.png");
+}
+
+.bg-i-off-repeat {
+    padding: 100px;
+    background-image: url("avatar.png");
+    background-repeat: no-repeat;
+}
+
+.bg-i-pos {
+    padding: 100px;
+    background-image: url("avatar.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50px 50px;
+}
+
+.bd {
+    text-align: center;
+    border-width: 10px;
+    border-color: red;
+    border-style: dashed;
+    border-radius: 200px 200px;
+}
+
+.bd-i {
+    text-align: center;
+    border: 30px;
+    border-color: red;
+    border-style: dashed;
+    border-radius: 200px 200px;
+    border-image: url("avatar.png");
+}
+
+
+.list-ol {
+    list-style-type: lower-roman;
+}
+
+.list-ul {
+    list-style-position: inside;
+    list-style-image: url("avatar.png")
+}
+
+.list-dl {
+    padding-left: 10px;
+    background-size: 30px 30px;
+    background-position: 0 0;
+    background-image: url("avatar.png");
+}
