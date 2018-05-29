@@ -1,0 +1,31 @@
+.resume {
+    color: white;
+    background-color: gray;
+}
+
+h2 {
+    background-color: rgb(189, 184, 184);
+    text-align: center;
+    width: 20%;
+    float: left;
+    margin: 0 auto;
+}
+
+.block, h2{
+    height: 200px;
+    border: 1px solid;
+}
+
+.block {
+    width: 79%;
+    float: right;
+}
+
+h4 {
+    margin: 0 auto;
+}
+
+h4, span, a{
+    float: left;
+    margin-right: 20px;
+}

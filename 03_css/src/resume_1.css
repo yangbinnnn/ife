@@ -1,0 +1,28 @@
+.resume {
+    text-align: center;
+    width: 25%;
+    height: 1000px;
+    color: white;
+    background-color: rgb(85, 133, 196);
+    float: left;
+    margin: 0 auto;
+}
+
+.resume div {
+    margin-top: 30px;
+}
+
+.main {
+    width: 74%;
+    float: right;
+    margin: 0 auto;
+}
+
+h4 {
+    margin: 0 auto;
+}
+
+h4, span, a{
+    float: left;
+    margin-right: 20px;
+}
