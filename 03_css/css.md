@@ -12,15 +12,11 @@ CSS（层叠样式表） 是用来定义网页样式（字体，颜色，大小�
 
 内联样式：`<p style=""xxx:xxx"">`
 
-
-
 ## 关于DOM
 
 DOM 是一种树状的数据结构，用来结构化地存储HTML 元素，CSS 样式，以及元素与样式的关系。
 
 也就是说，浏览器打开一个HTML 文档后会将这个文档中的元素和样式结构化到一个DOM 中，并在这个DOM 中记录没有元素的样式，最后通过这个DOM 渲染出最后的效果。
-
-
 
 ## CSS的基本语法是怎样的
 
@@ -41,8 +37,6 @@ p {
   background-color: yellow;
 }
 ```
-
-
 
 ## CSS选择器是什么概念，简单选择器和属性选择器是什么
 
@@ -102,8 +96,6 @@ a:visited {
 }
 ```
 
-
-
 ## 文本样式都有哪些相关属性，对应哪些值
 
 HTML 中文本占据了绝大部分。常见的属性：
@@ -127,8 +119,6 @@ p {
       font-style: italic;
   }
 ```
-
-
 
 ## CSS 层叠和继承
 
@@ -162,19 +152,13 @@ Class，属性，伪类: 10
 
 inherit: 继承父元素属性的文本样式，如字体大小，颜色等，不会继承布局
 
-
-
 ## 盒模型
 
 ![box-model-standard-small](../assets/box-model-standard-small.png)
 
-
-
-[box-sizing](https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-sizing): border-box，改变 `width` 和 `height` 的作用范围
+[box-sizing](https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-sizing): border-box，改变 `width` 和 `height` 的作用范围
 
 ![box-model-alt-small](../assets/box-model-alt-small.png)
-
-
 
 ## float 浮动元素
 
@@ -182,8 +166,17 @@ inherit: 继承父元素属性的文本样式，如字体大小，颜色等，�
 
 使用百分比的宽带，可以一定程度上自适应屏幕大小（流式、响应式布局）。
 
+清除浮动`clear:both`，表示浮动到当前元素为止，也就是说当前元素以下的元素不受浮动影响。
+
+```css
+<div style="clear:both"></div>
+```
+
+浮动的宽度难以计算，如果某列的宽度（padding 或border）变了则会影响整个列布局，此时可以用`box-sizing:border-box`  属性改变盒子模型使列的宽度一致。
+
 
 
 ## 参考
 
 - https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Introduction\_to\_CSS/Cascade\_and\_inheritance
+- https://css-tricks.com/all-about-floats/
