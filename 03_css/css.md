@@ -172,7 +172,23 @@ inherit: 继承父元素属性的文本样式，如字体大小，颜色等，�
 <div style="clear:both"></div>
 ```
 
-浮动的宽度难以计算，如果某列的宽度（padding 或border）变了则会影响整个列布局，此时可以用`box-sizing:border-box`  属性改变盒子模型使列的宽度一致。
+浮动的宽度难以计算，如果某列的宽度（padding 或border）变了则会影响整个列布局，此时可以用`box-sizing:border-box`  属性改变盒子模型使列的宽度一致。
+
+
+
+## inline、block和inline-block的概念
+
+- inline 内联元素，多个内联元素之间不换行，不可以设置`width` `height` 属性
+
+- block 块级元素，每一个块级元素独占一行，可以设置`width` `height` 属性
+
+- inline-block 内联块级元素，结合`inline` 和`block` 的特点，即不换行又可以设置`width` `height` 属性
+
+```css
+display: inline
+display: block
+display: inline-block
+```
 
 
 
