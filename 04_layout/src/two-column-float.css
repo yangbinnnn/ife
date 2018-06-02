@@ -1,0 +1,40 @@
+.left, .right {
+    box-sizing: border-box;
+    text-align: center;
+    height: 100px;
+}
+
+.left-p30-right-p70 .left {
+    background-color: burlywood;
+    width: 30%;
+    float: left;
+}
+
+.left-p30-right-p70 .right {
+    background-color: cadetblue;
+    width: 70%;
+    float: right;
+}
+
+.left-fixed-right-auto .left {
+    background-color: burlywood;
+    width: 300px;
+    float: left;
+}
+
+.left-fixed-right-auto .right {
+    background-color: cadetblue;
+    width: 100%;
+}
+
+
+.left-auto-right-fixed .left {
+    background-color: burlywood;
+    margin-right: 300px;
+}
+
+.left-auto-right-fixed .right {
+    background-color: cadetblue;
+    width: 300px;
+    float: right;
+}

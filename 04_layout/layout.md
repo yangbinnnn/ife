@@ -2,11 +2,15 @@
 
 正常文档流，不对页面进行任何布局控制，浏览器默认的HTML 布局样式，一般按照HTML 源码中元素的出现顺序排列，块级元素换行排列，内联元素在同一行排列直到一行空间无法排列则换行到下一行。
 
+
+
 ## 布局的几种方式
 
 - [float](03_css/src/float.html)
 
 - position
+
+
 
 ## position 定位
 
@@ -17,3 +21,15 @@
 - 绝对定位，`absolute`，脱离了正常文档流，相对于`<html>` 定位，如消息框，控制菜单
 
 - 固定定位，`fixed`，脱离正常文档流，相对于浏览器窗口定位，如导航菜单
+
+
+
+## HTML 元素顺序对布局的影响
+
+[两栏float布局](src/two-column-float.html)`class=left-auto-right-fixed` 中如果`class=left` 写在`class=right` 前面则会导致`class=right` 换行到下一个行显示。
+
+1. 浏览器从上往下解析渲染HTML 元素
+
+2. float 浮动脱离原来的文档流，不会影响其他元素的布局
+
+由于浏览器是从上往下解析渲染HTML，所以如果先渲染块级元素`class=left`，它会先占用一整行，导致另外一个块级元素`class=right`在下一行渲染。如果先渲染`class=right`由于float 浮动脱离了原来的文档流，所以它不会影响`class=left`的布局，最后的结果就是`left` 和`right` 在同一行显示。
