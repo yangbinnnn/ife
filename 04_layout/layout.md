@@ -6,7 +6,7 @@
 
 ## 布局的几种方式
 
-- [float](03_css/src/float.html)
+- [float](../03_css/src/float.html)
 
 - position
 
