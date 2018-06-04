@@ -4,27 +4,47 @@
     height: 100px;
 }
 
+.left-p30-right-p70 {
+    position: relative;
+}
+
 .left-p30-right-p70 .left {
     background-color: burlywood;
     width: 30%;
-    float: left;
 }
 
 .left-p30-right-p70 .right {
     background-color: cadetblue;
-    width: 70%;
-    float: right;
+    position: absolute;
+    top: 0px;
+    /* 可以使用70% 也可以使用right 0 */
+    /* width: 70%; */
+    right: 0px;
+    left: 30%;
+}
+
+.left-fixed-right-auto {
+    position: relative;
 }
 
 .left-fixed-right-auto .left {
     background-color: burlywood;
     width: 300px;
-    float: left;
 }
 
 .left-fixed-right-auto .right {
     background-color: cadetblue;
+    position: absolute;
+    /* 使用100% 时，宽度是300 + n，会超出页面 ?*/
     /* width: 100%; */
+    top: 0px;
+    right: 0px;
+    left: 300px;
+}
+
+
+.left-auto-right-fixed {
+    position: relative;
 }
 
 
@@ -36,5 +56,7 @@
 .left-auto-right-fixed .right {
     background-color: cadetblue;
     width: 300px;
-    float: right;
+    position: absolute;
+    top: 0px;
+    right: 0px;
 }

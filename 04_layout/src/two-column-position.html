@@ -3,8 +3,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="two-column-float.css">
-    <title>Two column by float</title>
+    <link rel="stylesheet" href="two-column-position.css">
+    <title>Two column by position</title>
 </head>
 <body>
     <div class="left-p30-right-p70">
@@ -16,7 +16,7 @@
         </div>
     </div>
 
-    <div style="clear: both;"></div><br>
+    <br>
 
     <div class="left-fixed-right-auto">
         <div class="left">
@@ -27,18 +27,18 @@
         </div>
     </div>
 
-    <div style="clear: both;"></div><br>
+    <br>
 
-    <!-- right 和 left 元素的顺序影响float 布局 -->
+    <!-- right 和 left 元素的顺序不影响影响position 布局 -->
     <div class="left-auto-right-fixed">
-        <div class="right">
-            Right content 300px
-        </div>
         <div class="left">
             Left content 100%
         </div>
+        <div class="right">
+            Right content 300px
+        </div>
     </div>
 
-    <div style="clear: both;"></div><br>
+    <br>
 </body>
 </html>

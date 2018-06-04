@@ -6,9 +6,11 @@
 
 ## 布局的几种方式
 
-- [float](../03_css/src/float.html)
+- [float](03_css/src/float.html)
 
 - position
+
+- 元素在HTML 中的位置顺序会影响[float](src/two-column-float.html) 的布局，但不会影响[position](src/two-column-position.html) 的布局
 
 
 
@@ -24,12 +26,8 @@
 
 
 
-## HTML 元素顺序对布局的影响
+## 参考
 
-[两栏float布局](src/two-column-float.html)`class=left-auto-right-fixed` 中如果`class=left` 写在`class=right` 前面则会导致`class=right` 换行到下一个行显示。
+- https://coolshell.cn/articles/9666.html
 
-1. 浏览器从上往下解析渲染HTML 元素
-
-2. float 浮动脱离原来的文档流，不会影响其他元素的布局
-
-由于浏览器是从上往下解析渲染HTML，所以如果先渲染块级元素`class=left`，它会先占用一整行，导致另外一个块级元素`class=right`在下一行渲染。如果先渲染`class=right`由于float 浮动脱离了原来的文档流，所以它不会影响`class=left`的布局，最后的结果就是`left` 和`right` 在同一行显示。
+- http://taligarsiel.com/Projects/howbrowserswork1.htm
