@@ -1,0 +1,60 @@
+.left, .right, .center {
+    box-sizing: border-box;
+    text-align: center;
+    height: 100px;
+}
+
+.left {
+    background-color: burlywood;
+}
+
+.right {
+    background-color: cadetblue;
+}
+
+.center {
+    background-color: rgb(93, 145, 41);
+}
+
+.left-right-fixed-center-auto, .left-center-fixed-right-auto {
+    position: relative;
+}
+
+.left-right-fixed-center-auto .left {
+    width: 300px;
+    top: 0px;
+    left: 0px;
+}
+
+.left-right-fixed-center-auto .center {
+    position: absolute;
+    top: 0px;
+    left: 300px;
+    right: 200px;
+}
+
+.left-right-fixed-center-auto .right {
+    width: 200px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.left-center-fixed-right-auto .left {
+    width: 300px;
+}
+
+.left-center-fixed-right-auto .right {
+    width: calc(100%-900px);
+    position: absolute;
+    top: 0px;
+    left: 900px;
+    right: 0px;
+}
+
+.left-center-fixed-right-auto .center {
+    width: 600px;
+    position: absolute;
+    top: 0px;
+    left: 300px;
+}
