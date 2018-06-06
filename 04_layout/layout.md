@@ -4,11 +4,11 @@
 
 ## 布局的几种方式
 
-- [float](03_css/src/float.html)
+- [float](../03_css/src/float.html)
 
-- position
+- [position](src/two-column-position.html)
 
-- flexbox
+- [flexbox](src/flexbox.html)
 
 ## 常用布局
 
@@ -21,6 +21,8 @@
 - 元素在HTML 中的位置顺序会影响float\](src/two-column-float.html) 的布局，但不会影响position\](src/two-column-position.html)
 
 - float 布局时如果浏览器窗口较小元素会自动换行，而position 布局会显示在同一行
+
+- flexbox 布局是如果浏览器窗口较小元素不会换行，元素内容会被压缩，但不会溢出，flexbox 在浏览器宽度足够是，各元素会保存指定的大小，但如果宽度不够元素会被压缩
 
 ## position 定位
 
@@ -37,3 +39,5 @@
 - https://coolshell.cn/articles/9666.html
 
 - http://taligarsiel.com/Projects/howbrowserswork1.htm
+
+- https://css-tricks.com/snippets/css/a-guide-to-flexbox/

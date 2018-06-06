@@ -1,0 +1,49 @@
+.left, .right, .center {
+    box-sizing: border-box;
+    text-align: center;
+    height: 100px;
+}
+
+.left {
+    background-color: burlywood;
+}
+
+.right {
+    background-color: cadetblue;
+}
+
+.center {
+    background-color: rgb(93, 145, 41);
+}
+
+.left-right-fixed-center-auto {
+    display: flex;
+}
+
+.left-right-fixed-center-auto .left {
+    width: 300px;
+}
+
+.left-right-fixed-center-auto .center {
+    flex: 1;
+}
+
+.left-right-fixed-center-auto .right {
+    width: 200px;
+}
+
+.left-center-fixed-right-auto {
+    display: flex;
+}
+
+.left-center-fixed-right-auto .left {
+    width: 300px;
+}
+
+.left-center-fixed-right-auto .right {
+    flex: 1;
+}
+
+.left-center-fixed-right-auto .center {
+    width: 600px;
+}
