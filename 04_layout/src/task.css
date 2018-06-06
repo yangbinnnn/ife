@@ -1,0 +1,80 @@
+body {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: rgb(49, 45, 45);
+    color: white;
+    position: relative;
+    height: 100px;
+}
+
+.header .logo {
+    position: absolute;
+    top: 0px;
+    left: 50px;
+}
+
+.header .link {
+    position: absolute;
+    top: 0px;
+    right: 30px;
+}
+
+.header .link li {
+    list-style-type: none;
+    text-decoration-line: underline;
+    display: inline-block;
+}
+
+.header .link li a {
+    color: white;
+}
+
+.header .link li a:hover {
+    color: blue;
+}
+
+.content .home {
+    display: flex;
+}
+
+.banner {
+    background-color: green;
+    height: 200px;
+    position: relative;
+}
+
+.banner .banner-select {
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+}
+
+.banner li {
+    list-style-type: none;
+    display: inline-block;
+    border: 1px solid;
+    padding: 6px;
+}
+
+.nav {
+    background-color: rgb(238, 155, 155);
+}
+
+.nav li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+section article {
+    border: 1px solid;
+    margin: 5px 5px;
+}
+
+.footer {
+    background-color: rgb(126, 117, 117);
+    height: 60px;
+    text-align: center;
+}
