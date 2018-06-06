@@ -2,6 +2,26 @@
 
 课程地址: http://ife.baidu.com
 
+## 预览
+
+[两栏浮动布局](https://htmlpreview.github.io/?https://github.com/yangbinnnn/ife/blob/master/04_layout/src/two-column-float.html)
+
+[两栏定位布局](https://htmlpreview.github.io/?https://github.com/yangbinnnn/ife/blob/master/04_layout/src/two-column-position.html)
+
+[两栏弹性盒子布局](https://htmlpreview.github.io/?https://github.com/yangbinnnn/ife/blob/master/04_layout/src/two-column-flexbox.html)
+
+[三栏浮动布局](https://htmlpreview.github.io/?https://github.com/yangbinnnn/ife/blob/master/04_layout/src/three-column-float.html)
+
+[三栏定位布局](https://htmlpreview.github.io/?https://github.com/yangbinnnn/ife/blob/master/04_layout/src/three-column-position.html)
+
+[三栏弹性盒子布局](https://htmlpreview.github.io/?https://github.com/yangbinnnn/ife/blob/master/04_layout/src/three-column-flexbox.html)
+
+[消息盒子](https://htmlpreview.github.io/?https://github.com/yangbinnnn/ife/blob/master/04_layout/src/info-box.html)
+
+[布局设计稿任务](https://htmlpreview.github.io/?https://github.com/yangbinnnn/ife/blob/master/04_layout/src/task.html)
+
+
+
 ## 打卡
 
 - [x] day_01 - 2018年05月24日
