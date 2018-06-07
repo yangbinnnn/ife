@@ -57,6 +57,11 @@ body {
     display: inline-block;
     border: 1px solid;
     padding: 6px;
+    height: 20px;
+}
+
+.banner li a:focus, .banner li a:hover{
+    background-color: white;
 }
 
 .nav {
@@ -66,6 +71,23 @@ body {
 .nav li {
     list-style-type: none;
     display: inline-block;
+}
+
+.content {
+    position: relative;
+    height: 1000px;
+}
+
+.content .active {
+    z-index: 1;
+}
+
+.content section {
+    position: absolute;
+    height: 500px;
+    display: flex;
+    background-color: aquamarine;
+    overflow: hidden;
 }
 
 section article {
