@@ -45,7 +45,7 @@ body {
     color: white;
 }
 
-.info-box li a.active {
+.info-box li a .active {
     background-color: #a60000;
     color: white;
 }
