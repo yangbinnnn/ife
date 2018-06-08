@@ -75,7 +75,7 @@ body {
 
 .content {
     position: relative;
-    height: 1000px;
+    height: 520px;
 }
 
 .content .active {
@@ -85,7 +85,9 @@ body {
 .content section {
     position: absolute;
     height: 500px;
+    width: 960px;
     display: flex;
+    flex-wrap: wrap;
     background-color: aquamarine;
     overflow: hidden;
 }
@@ -93,6 +95,9 @@ body {
 section article {
     border: 1px solid;
     margin: 5px 5px;
+    flex-grow: 1;
+    flex-basis: 250px;
+    /* width: 250px; */
 }
 
 .footer {
