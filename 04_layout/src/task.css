@@ -24,7 +24,6 @@ body {
 
 .header .link li {
     list-style-type: none;
-    text-decoration-line: underline;
     display: inline-block;
 }
 
@@ -57,20 +56,44 @@ body {
     display: inline-block;
     border: 1px solid;
     padding: 6px;
-    height: 20px;
-}
-
-.banner li a:focus, .banner li a:hover{
     background-color: white;
 }
 
+.banner li a {
+    display: block;
+    text-decoration-line: none;
+    padding: 0px;
+}
+
+.banner li a:focus, .banner li a:hover{
+    padding-top: 15px;
+}
+
 .nav {
-    background-color: rgb(238, 155, 155);
+    background-color: white;
+}
+
+.nav ul {
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+}
+
+.nav .active {
+    background-color: white;
 }
 
 .nav li {
     list-style-type: none;
     display: inline-block;
+    border: 1px solid;
+    border-bottom: 0px;
+    border-radius: 12px 12px 0px 0px;
+    padding: 4px;
+    background-color: gray;
+}
+
+.nav li a {
+    text-decoration-line: none;
 }
 
 .content {
@@ -88,7 +111,7 @@ body {
     width: 960px;
     display: flex;
     flex-wrap: wrap;
-    background-color: aquamarine;
+    background-color: white;
     overflow: hidden;
 }
 

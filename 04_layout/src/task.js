@@ -1,4 +1,4 @@
-var tabs = document.querySelectorAll('.nav li a');
+var tabs = document.querySelectorAll('.nav li');
 var panels = document.querySelectorAll('.content section');
 
 for(i = 0; i < tabs.length; i++) {
