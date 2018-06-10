@@ -16,7 +16,7 @@
 
 - 三栏布局
 
-- 圣杯布局: 两边定宽，中间自适应
+- [圣杯布局](http://alistapart.com/article/holygrail): 两边定宽，中间自适应
 
 - 元素在HTML 中的位置顺序会影响float\](src/two-column-float.html) 的布局，但不会影响position\](src/two-column-position.html)
 
@@ -34,6 +34,10 @@
 
 - 固定定位，`fixed`，脱离正常文档流，相对于浏览器窗口定位，如导航菜单
 
+## 负边距
+
+TODO
+
 ## 参考
 
 - https://coolshell.cn/articles/9666.html
@@ -41,3 +45,7 @@
 - http://taligarsiel.com/Projects/howbrowserswork1.htm
 
 - https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+- http://alistapart.com/article/holygrail
+
+- http://www.cnblogs.com/dolphinX/p/4071725.html
