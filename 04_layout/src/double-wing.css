@@ -1,0 +1,31 @@
+body {
+    min-width: 600px;
+}
+
+.main-wrap {
+    width: 100%;
+    float: left;
+}
+
+.main {
+    background-color: aquamarine;
+    height: 300px;
+    margin-left: 210px;
+    margin-right: 190px;
+}
+
+.left {
+    background-color: blanchedalmond;
+    height: 300px;
+    width: 200px;
+    float: left;
+    margin-left: -100%;
+}
+
+.right {
+    background-color: coral;
+    height: 300px;
+    width: 180px;
+    float: left;
+    margin-left: -180px;
+}
