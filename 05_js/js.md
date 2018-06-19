@@ -23,3 +23,4 @@
 
 - [DOM Style](https://www.w3schools.com/jsref/dom_obj_style.asp)
 - [DOM Events](https://www.w3schools.com/jsref/dom_obj_event.asp)
+- [DOM Keycodes](https://css-tricks.com/snippets/javascript/javascript-keycodes/)
