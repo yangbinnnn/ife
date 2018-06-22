@@ -11,6 +11,7 @@
 - 通过`script` 元素标签添加到页面中
 
 ## DOM Events
+
 - onclick，点击时触发
 - onload/onunload，用户打开/关闭页面是时触发
 - onchange，和输入框`input` 一起使用时可以做数据校验等
@@ -22,5 +23,9 @@
 - http://www.w3school.com.cn/js
 
 - [DOM Style](https://www.w3schools.com/jsref/dom_obj_style.asp)
+
 - [DOM Events](https://www.w3schools.com/jsref/dom_obj_event.asp)
+
 - [DOM Keycodes](https://css-tricks.com/snippets/javascript/javascript-keycodes/)
+
+- [事件委托](https://www.cnblogs.com/liugang-vip/p/5616484.html)

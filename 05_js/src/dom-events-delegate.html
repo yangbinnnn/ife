@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dom events delegate</title>
+</head>
+<body>
+    <p>使用委托</p>
+    <ul id="list">
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+    </ul> 
+    <hr style="border: 1px solid black">
+    <p>没有使用委托</p>
+    <ul id="list2">
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+    </ul>
+</body>
+<script>
+    var ul = document.getElementById("list")
+    ul.onclick = function(e) {
+        if (e.target && e.target.nodeName.toLowerCase() == "li") {
+            alert(e.target.innerHTML)
+        }
+    }
+
+    for (let li of document.getElementById("list2").querySelectorAll("li")) {
+        li.onclick = function(e) {
+            alert(e.target.innerHTML)
+        }
+    }
+</script>
+</html>
