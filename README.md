@@ -23,3 +23,13 @@
 [消息盒子](https://yangbinnnn.github.io/ife/04_layout/src/info-box.html)
 
 [布局设计稿任务](https://yangbinnnn.github.io/ife/04_layout/src/task.html)
+
+## 项目
+
+### ngxMan
+
+在web 端配置nginx 反向代理站点
+
+地址: https://github.com/yangbinnnn/ngxMan
+
+实现: semantic-ui + jquery + golang
