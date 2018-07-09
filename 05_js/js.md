@@ -10,6 +10,12 @@
 
 - 通过`script` 元素标签添加到页面中
 
+- 事件委托，在冒泡阶段判断事件目标，switch-case 不同的处理
+
+- `setTimeout` 只执行一次
+
+- `setInterval` 定期支持
+
 ## DOM Events
 
 - onclick，点击时触发
@@ -17,6 +23,8 @@
 - onchange，和输入框`input` 一起使用时可以做数据校验等
 - onmouseover/onmouseout，鼠标移入/移出时触发
 - onmousedown/onmouseup，鼠标下落/抬起时触发
+
+
 
 ## 参考
 
