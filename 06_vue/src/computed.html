@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://cdn.bootcss.com/vue/2.5.16/vue.min.js"></script>
+    <title>Vue computed</title>
+</head>
+<body>
+     <div id="app-8">
+        <p> Origin: {{ message }}</p>
+        <p> Computed reversed: {{ reversedMessage }}</p>
+        <p> Function reversed: {{ reversedMessageFunc() }}</p>
+     </div>
+
+     <div id="app-9">
+         <p> Fullname: {{ fullname }}</p>
+     </div>
+     <script>
+         var vm = new Vue({
+             el: '#app-8',
+             data: {
+                 'message': 'Hello Vue'
+             },
+             computed: {
+                 reversedMessage: function() {
+                     return this.message.split('').reverse().join('')
+                 }
+             },
+             methods: {
+                 reversedMessageFunc: function() {
+                     return this.message.split('').reverse().join('')
+                 }
+             }
+         })
+         var vm1 = new Vue({
+             el: '#app-9',
+             data: {
+                 firstname: 'yang',
+                 lastname: 'bin'
+             },
+             computed: {
+                 fullname: function() {
+                     return this.firstname + ' ' + this.lastname
+                 }
+             }
+         })
+     </script>
+</body>
+</html>
