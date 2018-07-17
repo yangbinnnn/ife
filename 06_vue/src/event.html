@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://cdn.bootcss.com/vue/2.5.16/vue.min.js"></script>
+    <title>Vue Event</title>
+</head>
+<body>
+    <div id="app-9">
+        输入<input type="text" v-model="name" v-bind:name="name"> 
+        <button v-on:click="greet">问候</button>
+    </div>
+    <div id="app-10">
+        输入<input type="text" v-model="name"> 
+        <bnt v-on:greet="greet"></bnt>
+    </div>
+    <script>
+        var app9 = new Vue({
+            el: '#app-9',
+            data: {
+                name: ''
+            },
+            methods: {
+                'greet': function() {
+                    alert('hello ' + this.name)
+                }
+            }
+        })
+        var app10 = new Vue({
+            el: '#app-10',
+            data: {
+                name: ''
+            },
+            methods: {
+                greet: function() {
+                    alert('hello ' + this.name)
+                }
+            },
+            components: {
+                'bnt': {
+                    template: `
+                    <button v-on:click="$emit('greet')">问候with component</button>
+                    `,
+                }
+            }
+        })
+    </script>
+    
+</body>
+</html>

@@ -36,7 +36,17 @@ methods: {
 }
 ```
 
+## 组件
+- 组件是可以复用的Vue 示例
+- 组件的`data` 必须是一个function
+- 任何数据都不会被自动传递到组件里，因为组件有自己独立的作用域。为了把迭代数据传递到组件里，我们要用`props` 并用
+`v-bind:x='x'` 传递,
+- 可通过`emit` 触发自定义事件
+
+
 ## 链接
 
 - API: https://cn.vuejs.org/v2/api
 - Key: https://cn.vuejs.org/v2/api/#key, https://cn.vuejs.org/v2/guide/list.html#key
+- https://coderexample.com/your-first-vuejs-app/
+- https://laravel-news.com/jquery-vue
