@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="http://unpkg.com/iview/dist/styles/iview.css">
+    <script type="text/javascript" src="http://vuejs.org/js/vue.min.js"></script>
+    <script type="text/javascript" src="http://unpkg.com/iview/dist/iview.min.js"></script>
+    <title>iview select</title>
+</head>
+<body>
+    <div id="app">
+    <row>
+        <i-col span="8" style="padding-right:10px">
+            <i-select v-model="model10" filterable>
+                <i-option v-for="site in sites" :value="site" :key="site">{{ site }}</i-option>
+            </i-select>
+        </i-col>
+        <i-col span="8" style="padding-right:10px">
+            <i-select v-model="model11" filterable>
+                <i-option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</i-option>
+            </i-select>
+        </i-col>
+        <i-col span="8">
+            <i-select v-model="model12" filterable multiple>
+                <i-option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</i-option>
+            </i-select>
+        </i-col>
+    </row>
+    </div> 
+    <script>
+
+    new Vue({
+        el: "#app",
+        data () {
+            return {
+                cityList: [
+                    {
+                        value: 'New York',
+                        label: 'New York'
+                    },
+                    {
+                        value: 'London',
+                        label: 'London'
+                    },
+                    {
+                        value: 'Sydney',
+                        label: 'Sydney'
+                    },
+                    {
+                        value: 'Ottawa',
+                        label: 'Ottawa'
+                    },
+                    {
+                        value: 'Paris',
+                        label: 'Paris'
+                    },
+                    {
+                        value: 'Canberra',
+                        label: 'Canberra'
+                    }
+                ],
+                sites: [
+                    'a.cloudhua.com',
+                    'b.cloudhua.com'
+                ],
+                model10: '',
+                model11: '',
+                model12: []
+            }
+        }
+    })
+    </script>
+</body>
+</html>
