@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="http://unpkg.com/iview/dist/styles/iview.css">
+    <script type="text/javascript" src="http://vuejs.org/js/vue.min.js"></script>
+    <script type="text/javascript" src="http://unpkg.com/iview/dist/iview.min.js"></script>
+    <title>iview menu</title>
+</head>
+<body>
+<div id="app">
+    <i-menu :theme="theme" active-name="1">
+        <menu-group title="内容管理">
+            <menu-item name="1">
+                <Icon type="document-text"></Icon>
+                文章管理
+            </menu-item>
+            <menu-item name="2">
+                <Icon type="chatbubbles"></Icon>
+                评论管理
+            </menu-item>
+        </menu-group>
+        <menu-group title="统计分析">
+            <menu-item name="3">
+                <Icon type="heart"></Icon>
+                用户留存
+            </menu-item>
+            <menu-item name="4">
+                <Icon type="heart-broken"></Icon>
+                流失用户
+            </menu-item>
+        </menu-group>
+        <hr>
+        <radio-group v-model="theme">
+            <radio label="light"></radio>
+            <radio label="dark"></radio>
+        </radio-group>
+    </i-menu>
+    <br>
+
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            theme: 'light'
+        }
+    })
+</script>
+</body>
+</html>
