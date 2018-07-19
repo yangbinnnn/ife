@@ -33,3 +33,11 @@
 地址: https://github.com/yangbinnnn/ngxMan
 
 实现: semantic-ui + jquery + golang
+
+### ngx-upload-web
+
+简单nginx 文件上传服务
+
+地址: https://github.com/yangbinnnn/ngx-upload-web
+
+实现: vue + iview + openresty(nginx + lua)
