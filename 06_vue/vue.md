@@ -48,5 +48,6 @@ methods: {
 
 - API: https://cn.vuejs.org/v2/api
 - Key: https://cn.vuejs.org/v2/api/#key, https://cn.vuejs.org/v2/guide/list.html#key
+- https://vue-loader-v14.vuejs.org/zh-cn/features/scoped-css.html
 - https://coderexample.com/your-first-vuejs-app/
 - https://laravel-news.com/jquery-vue

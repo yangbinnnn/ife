@@ -39,3 +39,5 @@
 - [事件委托](https://www.cnblogs.com/liugang-vip/p/5616484.html)
 
 - [页面宽度和高度](http://www.cnblogs.com/polk6/p/5051935.html)
+
+- [let vs var](https://stackoverflow.com/questions/762011/whats-the-difference-between-using-let-and-var-to-declare-a-variable-in-jav)
