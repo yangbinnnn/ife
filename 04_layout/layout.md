@@ -20,7 +20,7 @@
 
 - [双飞翼布局](https://theqwang.github.io/2016/01/08/%E6%B5%85%E6%9E%90%E5%9C%A3%E6%9D%AF%E5%B8%83%E5%B1%80%E5%92%8C%E5%8F%8C%E9%A3%9E%E7%BF%BC%E5%B8%83%E5%B1%80): 两边定宽，中间自适应，main-wrap -> main -> left -> right
 
-- 元素在HTML 中的位置顺序会影响float\](src/two-column-float.html) 的布局，但不会影响position\](src/two-column-position.html)
+- 元素在HTML 中的位置顺序会影响[float](src/two-column-float.html) 的布局，但不会影响[position](src/two-column-position.html)
 
 - float 布局时如果浏览器窗口较小元素会自动换行，而position 布局会显示在同一行
 
