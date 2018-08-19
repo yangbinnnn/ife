@@ -23,6 +23,7 @@
 - onchange，和输入框`input` 一起使用时可以做数据校验等
 - onmouseover/onmouseout，鼠标移入/移出时触发
 - onmousedown/onmouseup，鼠标下落/抬起时触发
+- popstate, 在浏览器前进和后退是触发，`history.forward()` 和`history.back()`
 
 
 

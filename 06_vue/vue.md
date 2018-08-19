@@ -4,11 +4,27 @@ Vue.js 是一套构建用户界面的渐进式框架
 
 ## 语法
 
-- `v-on:` 用于绑定事件，如`v-on:click`
+- `v-on` 用于绑定事件，如`v-on:click`
 - `v-if` 用于做条件判断
 - `v-for` 用于绑定一个数组, 优先级比`v-if` 高
 - `v-model` 用于双向绑定数据，可用于方便取`input` 数据等
 - `v-bind` 用于动态的将一个或多个特性，或一个组件`props` 绑定到一个表达式，可缩写为: `:`
+
+### v-bind 动态设置元素属性
+动态设置按钮`disabled` 属性
+```
+<Button v-bind:disabled="isActived"> {{ activedStatus }} </Button>
+```
+如果使用`v-if` 和`v-else` 则比较冗余
+```
+<a v-if="!isActived">
+<Button>未激活</Button>
+</a>
+<a v-else>
+<Button disabled>已激活</Button>
+</a>
+```
+
 
 
 ## Vue 实例生命周期
@@ -43,6 +59,9 @@ methods: {
 `v-bind:x='x'` 传递,
 - 可通过`emit` 触发自定义事件
 
+## vue-route
+
+
 ## 其他
 
 ### `h` 的含义
@@ -67,7 +86,15 @@ render: function (createElement) {
 ```
 link: https://github.com/vuejs-templates/webpack-simple/issues/29
 
+## 项目开发
 
+```
+npm install -g @vue/cli @vue/cli-init 
+```
+
+```
+vue init webpack vue-routing
+```
 
 ## 链接
 
