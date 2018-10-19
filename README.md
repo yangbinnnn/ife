@@ -41,3 +41,7 @@
 地址: https://github.com/yangbinnnn/ngx-upload-web
 
 实现: vue + iview + openresty(nginx + lua)
+
+## 资源
+- ICON 图标: http://www.iconfont.cn
+- 

@@ -61,6 +61,11 @@ methods: {
 
 ## vue-route
 
+## vuex
+主要功能在多个组件之间共享状态数据
+
+![vuex](../assets/vuex.png)
+
 
 ## 其他
 
@@ -105,3 +110,4 @@ vue init webpack vue-routing
 - https://laravel-news.com/jquery-vue
 - https://codesandbox.io
 - How the hell can i include a css file: https://github.com/vuejs-templates/webpack/issues/604
+- https://flaviocopes.com/vue-introduction/
