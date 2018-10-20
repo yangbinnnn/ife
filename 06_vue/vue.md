@@ -101,6 +101,58 @@ npm install -g @vue/cli @vue/cli-init
 vue init webpack vue-routing
 ```
 
+### Webpack Loader
+通过`loader` 处理各种资源文件，`.js`，`.css`等等，将各种资源绑定到一起，VUE 脚手架生成的工程目录使用以下几种loader
+配置路径`build/webpack.base.conf.js`
+
+- [file-loader](https://webpack.js.org/loaders/file-loader/) 加载文件
+- [url-loader](https://webpack.js.org/loaders/url-loader/) 将文件转换成base64 编码，一般用于处理图片资源
+
+> 将小于10000 字节的图片文件，转换成base64，大于10000 字节的文件使用`file-loader` 加载，文件输出位置`img/`
+文件命名规则：`[name].[hash:7].[ext]`
+```
+{
+    test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+    loader: 'url-loader',
+    options: {
+        limit: 10000,
+        name: utils.assetsPath('img/[name].[hash:7].[ext]')
+    }
+}
+```
+
+- [babel-loader](https://webpack.js.org/loaders/babel-loader/) 将ES5+ 代码转换成ES5（运行环境兼容，比如使用了ES新的语法，但运行环境不支持这个语法，babel 将可以将这个新语法转换成相同效果且能在当前环境运行的语法）
+
+> 使用`babel-loader` 处理`src`,`test` 目录下的`js` 文件
+```
+{
+    test: /\.js$/,
+    loader: 'babel-loader',
+    include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
+}
+```
+
+- [vue-loader](https://github.com/vuejs/vue-loader) 用于处理`vue` 单文件组件
+
+```
+{
+    test: /\.vue$/,
+    loader: 'vue-loader',
+    options: vueLoaderConfig
+}
+```
+
+- https://webpack.js.org/loaders/
+
+### 实践
+
+- N 选 1
+> 有N 个按钮，只能选择1 个
+[pickone.html](src/pickone.html) 中两种实现方式，`button + click event` 实现比`radio check` 要简单一些
+
+
+
+
 ## 链接
 
 - API: https://cn.vuejs.org/v2/api

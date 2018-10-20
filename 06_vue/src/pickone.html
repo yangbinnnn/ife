@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pick One</title>
+    <script src="http://cdn.bootcss.com/vue/2.5.16/vue.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div id="app-0">
+        <p>Button click</p>
+        <button v-on:click="pick('A')" v-bind:class="{ pickedClass: isPicked('A') }">A</button>
+        <button v-on:click="pick('B')" v-bind:class="{ pickedClass: isPicked('B') }">B</button>
+        <button v-on:click="pick('C')" v-bind:class="{ pickedClass: isPicked('C') }">C</button>
+    </div>
+    <div id="app-1">
+        <p>Radio check</p>
+        <label v-bind:class="{ pickedClass: isPicked('A') }">
+            <input type="radio" v-model="picked" value="A"></input>
+            <img src="https://image.flaticon.com/icons/png/512/1152/1152919.png">
+        </label>
+        <label v-bind:class="{ pickedClass: isPicked('B') }">
+            <input type="radio" v-model="picked" value="B"></input>
+            <img src="https://image.flaticon.com/icons/png/512/1152/1152919.png">
+        </label>
+        <label v-bind:class="{ pickedClass: isPicked('C') }">
+            <input type="radio" v-model="picked" value="C"></input>
+            <img src="https://image.flaticon.com/icons/png/512/1152/1152919.png">
+        </label>
+    </div>
+</body>
+<script>
+
+new Vue({
+    el: '#app-0',
+    data () {
+        return {
+            picked: 'A',
+        }
+    },
+    methods: {
+        pick: function (value) {
+            this.picked = value
+        },
+        isPicked: function (value) {
+            return value === this.picked
+        }
+    },
+})
+
+new Vue({
+    el: '#app-1',
+    data () {
+        return {
+            picked: 'A'
+        }
+    },
+    methods: {
+        isPicked: function (value) {
+            return value === this.picked
+        }
+    }
+
+})
+</script>
+
+<style>
+    .pickedClass {
+        background: red;
+    }
+    label > input { /* HIDE RADIO */
+        visibility: hidden; /* Makes input not-clickable */
+        position: absolute; /* Remove input from document flow */
+    }
+    label > input + img{ /* IMAGE STYLES */
+        cursor:pointer;
+        border:2px solid transparent;
+        width: 20px;
+        height: auto;
+    }
+</style>
+</html>
