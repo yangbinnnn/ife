@@ -10,9 +10,15 @@
 <body>
     <div id="app-0">
         <p>Button click</p>
-        <button v-on:click="pick('A')" v-bind:class="{ pickedClass: isPicked('A') }">A</button>
-        <button v-on:click="pick('B')" v-bind:class="{ pickedClass: isPicked('B') }">B</button>
-        <button v-on:click="pick('C')" v-bind:class="{ pickedClass: isPicked('C') }">C</button>
+        <button v-on:click="pick('A')" v-bind:class="{ pickedClass: isPicked('A') }">
+        <img src="https://image.flaticon.com/icons/png/512/1152/1152919.png">
+        </button>
+        <button v-on:click="pick('B')" v-bind:class="{ pickedClass: isPicked('B') }">
+        <img src="https://image.flaticon.com/icons/png/512/1152/1152919.png">
+        </button>
+        <button v-on:click="pick('C')" v-bind:class="{ pickedClass: isPicked('C') }">
+        <img src="https://image.flaticon.com/icons/png/512/1152/1152919.png">
+        </button>
     </div>
     <div id="app-1">
         <p>Radio check</p>
@@ -73,11 +79,13 @@ new Vue({
         visibility: hidden; /* Makes input not-clickable */
         position: absolute; /* Remove input from document flow */
     }
+    img {
+        width: 20px;
+        height: auto;
+    }
     label > input + img{ /* IMAGE STYLES */
         cursor:pointer;
         border:2px solid transparent;
-        width: 20px;
-        height: auto;
     }
 </style>
 </html>
