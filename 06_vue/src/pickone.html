@@ -35,6 +35,15 @@
             <img src="https://image.flaticon.com/icons/png/512/1152/1152919.png">
         </label>
     </div>
+    <div id="app-2">
+        <p>Button click</p>
+        <picked-bnt v-on:click.native="pick('A')" v-bind:class="{ pickedClass: isPicked('A') }" imgsrc="https://image.flaticon.com/icons/png/512/1152/1152919.png">
+        </picked-bnt>
+        <picked-bnt v-on:click.native="pick('B')" v-bind:class="{ pickedClass: isPicked('B') }" imgsrc="https://image.flaticon.com/icons/png/512/1152/1152919.png">
+        </picked-bnt>
+        <picked-bnt v-on:click.native="pick('C')" v-bind:class="{ pickedClass: isPicked('C') }" imgsrc="https://image.flaticon.com/icons/png/512/1152/1152919.png">
+        </picked-bnt>
+    </div>
 </body>
 <script>
 
@@ -68,6 +77,28 @@ new Vue({
         }
     }
 
+})
+
+Vue.component('picked-bnt', {
+    props: ['imgsrc'],
+    template: '<button><img v-bind:src="imgsrc"></button>'
+})
+
+new Vue({
+    el: '#app-2',
+    data () {
+        return {
+            picked: 'A'
+        }
+    },
+    methods: {
+        pick: function (value) {
+            this.picked = value
+        },
+        isPicked: function (value) {
+            return value === this.picked
+        }
+    }
 })
 </script>
 
