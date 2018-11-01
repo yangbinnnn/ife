@@ -164,3 +164,4 @@ vue init webpack vue-routing
 - How the hell can i include a css file: https://github.com/vuejs-templates/webpack/issues/604
 - https://flaviocopes.com/vue-introduction/
 - https://alligator.io/vuejs/component-slots/
+- https://medium.com/3yourmind/large-scale-vuex-application-structures-651e44863e2f
