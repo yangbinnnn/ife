@@ -1,0 +1,84 @@
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="http://cdn.bootcss.com/vue/2.5.16/vue.min.js"></script>
+        <style>
+            table {
+                width: 400px;
+            }
+
+            table,
+            th,
+            td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                text-align: center;
+            }
+        </style>
+        <title>Vue render</title>
+    </head>
+
+    <body>
+        <div id="app">
+            <anchored-heading :level="1">Hello world!</anchored-heading>
+            <anchored-heading :level="2">Hello world!</anchored-heading>
+            <anchored-heading :level="2">Hello world!</anchored-heading>
+            <anchored-heading :level="2">Hello world!</anchored-heading>
+
+            <my-select :option="option"></my-select>
+            <p>select value: {{ option.value }}</p>
+        </div>
+    </body>
+
+    <script>
+        Vue.component('anchored-heading', {
+            render: function (createElement) {
+                return createElement(
+                    'h' + this.level,   // 标签名称
+                    this.$slots.default // 子元素数组
+                )
+            },
+            props: {
+                level: {
+                    type: Number,
+                    required: true
+                }
+            }
+        })
+        Vue.component('my-select', {
+            props: ['option'],
+            render: function (createElement) {
+                var self = this
+                return createElement(
+                    'select',
+                    {
+                        domProps: {
+                            value: self.option.value
+                        },
+                        on: {
+                            input: function (event) {
+                                self.option.value = event.target.value
+                            }
+                        }
+                    },
+                    ['A', 'B', 'C'].map(function (item) {
+                        return createElement('option', {attrs: {value: item}}, item)
+                    })
+                )
+            }
+        })
+
+        new Vue({
+            el: "#app",
+            data: {
+                option: {
+                    value: 'A'
+                }
+            }
+        })
+    </script>
+
+    </html>

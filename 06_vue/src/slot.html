@@ -1,0 +1,150 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://cdn.bootcss.com/vue/2.5.16/vue.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+    <p>slot 不能单独存在，否则会被忽略，以下内容不显示</p>
+    <no-parent-slot>
+        here no parent slot
+    </no-parent-slot>
+    <br>
+
+    <p>模板中必须定义slot，否则会被忽略, 以下内容不显示</p>
+    <no-slot>
+        here no slot
+    </no-slot>
+    <br>
+
+    <p>有效的匿名slot 定义，以下内容正常显示</p>
+    <with-slot>
+        覆盖默认slot 内容
+    </with-slot>
+    <br>
+
+    <p>有效的匿名slot 定义，使用slot 默认内容 </p>
+    <with-slot></with-slot>
+    <br>
+
+    <p>无效的多个具名slot, 模板没有定义root 元素, 以下内容不显示</p>
+    <box1>
+        <template slot="slot1">
+            here slot1
+        </template>
+        <template slot="slot2">
+            here slot2
+        </template>
+    </box1>
+    <br>
+
+    <p>有效的多个具名slot, template 元素为空时，使用默认内容，以下内容正常显示</p>
+    <box2>
+        <template slot="slot1">
+            覆盖slot1默认内容
+        </template>
+        <template slot="slot2">
+        </template>
+    </box2>
+    <br>
+
+    <p>有效的多个具名slot, slot 具有相同的父元素, 以下内容正常显示</p>
+    <box3>
+        <template slot="slot1">
+            覆盖slot1默认内容
+        </template>
+        <template slot="slot2">
+        </template>
+    </box3>
+    <br>
+
+    <p>有效的具名slot, 作用于普通元素, 覆盖默认内容, 以下内容正常显示</p>
+    <box2>
+        <p slot="slot1">
+            覆盖slot1默认内容
+        </p>
+        <h3 slot="slot2">
+            覆盖slot2默认内容
+        </h3>
+    </box2>
+    <br>
+
+    <p>有效的具名slot, 作用于普通元素, 空内容覆盖slot 默认内容，以下内容为空</p>
+    <box2>
+        <p slot="slot1"></p>
+        <p slot="slot2"></p>
+    </box2>
+    <br>
+
+    <p>有效的具名slot, 作用于template 元素, 空内容，使用slot 默认内容，以下内容正常显示</p>
+    <box2>
+        <template slot="slot1"></template>
+        <template slot="slot2"></template>
+    </box2>
+    <br>
+
+</div>
+<script>
+    // default slot
+    Vue.component('no-parent-slot', {
+        template: `<slot>当前内容被忽略</slot>`
+    })
+
+    Vue.component('no-slot', {
+        template: `<div></div>`
+    })
+
+    Vue.component('with-slot', {
+        template: `
+        <div>
+        <slot>默认内容</slot>
+        </div>
+        `
+    })
+
+    // name slot
+    Vue.component('box1', {
+        template: `
+        <div">
+            <slot name="slot1">slot1默认内容</slot>
+        </div>
+        <div>
+            <slot name="slot2">slot2默认内容</slot>
+        </div>
+        `
+    })
+
+    Vue.component('box2', {
+        template: `
+        <div>
+            <div>
+                <slot name="slot1">slot1默认内容</slot>
+            </div>
+            <div>
+                <slot name="slot2">slot2默认内容</slot>
+            </div>
+        </div>
+        `
+    })
+
+    Vue.component('box3', {
+        template: `
+        <div>
+            <slot name="slot1">slot1默认内容</slot>
+            <slot name="slot2">slot2默认内容</slot>
+        </div>
+        `
+    })
+
+    new Vue({
+        el: '#app',
+        data: {
+            msg: 'Server Exception!'
+        },
+    })
+</script>
+</body>
+</html>

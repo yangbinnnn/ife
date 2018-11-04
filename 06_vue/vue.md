@@ -56,8 +56,15 @@ methods: {
 - 组件是可以复用的Vue 示例
 - 组件的`data` 必须是一个function
 - 任何数据都不会被自动传递到组件里，因为组件有自己独立的作用域。为了把迭代数据传递到组件里，我们要用`props` 并用
-`v-bind:x='x'` 传递,
+`v-bind:x='x'` 传递，且父子之间prop 为单向下行绑定，父级prop 更新会影响子级prop，子级prop 不影响父级prop
 - 可通过`emit` 触发自定义事件
+
+## [slot](src/slot.html)
+- 插槽在组件模板中定义，`<slot/>`用于接受并展示组件模板传入的内容
+- 如果模板中没有`<slot/>` 元素，则渲染页面时父元素传入的内容会被忽略
+- `<slot/>` 中可以定义默认的内容，如果父元素传入内容则忽略默认的内容，否则使用默认内容
+- 多个具名`<slot name="xxx"/>` 在模板中必须要有相同的祖宗元素
+- 具名`<slot name="xxx"/>` 作用于`<template>` 元素与其他普通元素如`<p>` 效果有所差别
 
 ## vue-route
 
@@ -165,3 +172,7 @@ vue init webpack vue-routing
 - https://flaviocopes.com/vue-introduction/
 - https://alligator.io/vuejs/component-slots/
 - https://medium.com/3yourmind/large-scale-vuex-application-structures-651e44863e2f
+- Edit table https://segmentfault.com/a/1190000016850565
+- https://github.com/w3c/webcomponents/blob/gh-pages/proposals/Slots-Proposal.md
+- 定义模板的多种方法 https://juejin.im/entry/598297b95188253592278f77
+- https://itnext.io/how-not-to-vue-18f16fe620b5

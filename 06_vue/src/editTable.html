@@ -1,0 +1,117 @@
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="http://cdn.bootcss.com/vue/2.5.16/vue.min.js"></script>
+        <style>
+            table {
+                width: 400px;
+            }
+
+            table,
+            th,
+            td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                text-align: center;
+            }
+        </style>
+        <title>Vue render</title>
+    </head>
+
+    <body>
+        <div id="app">
+            <table style="border: 1px">
+                <tr>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>操作</th>
+                </tr>
+                <!-- https://vuejs.org/v2/guide/components.html#DOM-Template-Parsing-Caveats -->
+                <!-- https://vuejs.org/v2/guide/components-custom-events.html#sync-Modifier -->
+                <tr v-for="(item, idx) in tds">
+                    <td>{{item.name}}</td>
+                    <td is="editTD" 
+                        :sex.sync="item.sex" 
+                        :key="idx"
+                        :edit="edit">
+                    </td>
+                    <td><button @click="onEdit(idx)">修改</button></td>
+                </tr>
+            </table>
+            <p>{{tds}}</p>
+        </div>
+    </body>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data() {
+                return {
+                    tds: [
+                        {
+                            "name": "tim",
+                            "sex": "man",
+                        },
+                        {
+                            "name": "lily",
+                            "sex": "woman",
+                        }
+                    ],
+                    edit: {
+                        isEditing: false,
+                        editIdx: 0,
+                    }
+                }
+            },
+            methods: {
+                onEdit(idx) {
+                    this.edit.isEditing = true
+                    this.edit.editIdx = idx
+                },
+                onSave() {
+                    this.edit.isEditing = false
+                    this.edit.editIdx = 0
+                }
+            },
+            components: {
+                'editTD': {
+                    props: ['sex', 'edit'],
+                    render: function (createElement) {
+                        var self = this
+                        if (this.edit.isEditing && this.edit.editIdx === this.$vnode.key) {
+                            return createElement(
+                                'td',
+                                [
+                                createElement(
+                                'select',
+                                {
+                                    domProps: {
+                                        value: this.sex
+                                    },
+                                    on: {
+                                        input: function (event) {
+                                            this.sex = event.target.value
+                                            self.$emit('update:sex', event.target.value)
+                                        }
+                                    }
+                                },
+                                ['man', 'woman'].map(function (item) {
+                                    return createElement('option', {attrs: {value: item}}, item)
+                                }))
+                                ]
+                            )
+                        }
+                        return createElement(
+                            'td',
+                            this.sex
+                        )
+                    }
+                }
+            }
+        })
+    </script>
+
+    </html>
