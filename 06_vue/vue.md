@@ -157,7 +157,9 @@ vue init webpack vue-routing
 > 有N 个按钮，只能选择1 个
 [pickone.html](src/pickone.html) 中两种实现方式，`button + click event` 实现比`radio check` 要简单一些
 
-
+- 可编辑表格
+> 通过render 实现表格的编辑功能
+[editTable.html](src/editTable.html)
 
 
 ## 链接
